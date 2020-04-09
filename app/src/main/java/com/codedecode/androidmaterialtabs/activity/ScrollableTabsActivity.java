@@ -1,14 +1,12 @@
 package com.codedecode.androidmaterialtabs.activity;
 
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-
 import com.codedecode.androidmaterialtabs.R;
 import com.codedecode.androidmaterialtabs.fragments.EightFragment;
 import com.codedecode.androidmaterialtabs.fragments.FiveFragment;
@@ -30,6 +28,9 @@ public class ScrollableTabsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrollable_tabs);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         ViewPager viewPager = findViewById(R.id.viewpager);
         setupViewPager(viewPager);
